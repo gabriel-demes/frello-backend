@@ -1,0 +1,2 @@
+class MemebershipsController < ApplicationController
+end
