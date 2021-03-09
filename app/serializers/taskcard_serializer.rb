@@ -1,4 +1,4 @@
 class TaskcardSerializer < ActiveModel::Serializer
   attributes :id, :title, :deadline, :description
-  has_one :list
+  belongs_to :list
 end
