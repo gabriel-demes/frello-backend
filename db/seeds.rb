@@ -24,4 +24,4 @@ task5 = Taskcard.create(title: 'TC5', deadline: 'friday', description: 'delivera
 mem1 = Memebership.create(user_id: user1.id, organization_id: org1.id)
 mem2 = Memebership.create(user_id: user2.id, organization_id: org1.id)
 mem3 = Memebership.create(user_id: user2.id, organization_id: org2.id)
-mem4 = Memebership.create(user_id: user1.id, organization_id: org1.id)
+mem4 = Memebership.create(user_id: user1.id, organization_id: org2.id)

@@ -4,6 +4,11 @@ class TaskcardsController < ApplicationController
         @taskcards = Taskcard.all
         render json: @taskcards
     end
+
+    def show 
+        @taskcard = Taskcard.find(params[:id])
+        render json: @taskcard
+    end
     
     def create 
        @taskcard = Taskcard.create(taskcard_params)
@@ -13,6 +18,12 @@ class TaskcardsController < ApplicationController
     def destroy 
         @taskcard = Taskcard.find(params[:id])
         @taskcard.destroy
+        render json: @taskcard
+    end
+
+    def update
+        @taskcard = Taskcard.find(params[:id])
+        @taskcard.update(taskcard_params)
         render json: @taskcard
     end
 
