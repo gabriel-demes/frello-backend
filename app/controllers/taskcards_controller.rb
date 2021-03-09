@@ -1,4 +1,10 @@
 class TaskcardsController < ApplicationController
+
+    def index
+        @taskcards = Taskcard.all
+        render json: @taskcards
+    end
+    
     def create 
        @taskcard = Taskcard.create(taskcard_params)
        render json: @taskcard
@@ -17,4 +23,5 @@ class TaskcardsController < ApplicationController
 
     def taskcard_params
         params.permit(:title,:deadline,:description)
+    end
 end

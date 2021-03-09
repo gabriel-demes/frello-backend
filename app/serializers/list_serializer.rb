@@ -1,5 +1,5 @@
 class ListSerializer < ActiveModel::Serializer
   attributes :id, :title
-  belongs_to :organization
+  #has_one :organization
   has_many :taskcards 
 end
