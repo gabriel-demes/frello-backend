@@ -3,4 +3,11 @@ class Organization < ApplicationRecord
     has_many :taskcards, through: :lists
     has_many :memberships
     has_many :users, through: :memberships 
+
+    
+       
+       validates :memembership_code, uniqueness: true
+    
+
+
 end
