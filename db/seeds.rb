@@ -8,8 +8,8 @@
 user1 = User.create(name: "Gabriel", username: 'Gabe', password: 'abc123')
 user2 = User.create(name: "Jaskomal", username: 'Jas', password: 'abc321')
 
-org1 = Organization.create(name: 'Flatiron', memembership_code: 123)
-org2 = Organization.create(name: 'Notiron', memembership_code: 321)
+org1 = Organization.create(name: 'Flatiron',memembership_code: 1)
+org2 = Organization.create(name: 'Notiron', memembership_code: 2)
 
 lis1 = List.create(title: 'List1', organization_id: org1.id)
 lis2 = List.create(title: 'List2', organization_id: org2.id)

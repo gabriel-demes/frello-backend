@@ -12,8 +12,12 @@ class OrganizationsController < ApplicationController
     end
 
     def create
-        @organization = Organization.create(name: organization_params[:name])
-        #Memebership.create(user_id: organization_params[:user_id], organization_id: @organization.id)
+        @organization = Organization.create(name: organization_params[:name], memembership_code: organization_params[:memembership_code])
+        if @organization.save
+             @organization.update(memembership_code: Randomstring.generate(6))
+        end
+        
+        #@organization.save
         render json: @organization
     end
 
@@ -21,6 +25,6 @@ class OrganizationsController < ApplicationController
     private
   
     def organization_params
-        params.permit(:name, :membership_code, :user_id)
+        params.permit(:name, :memembership_code, :user_id)
     end
 end
