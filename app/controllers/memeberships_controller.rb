@@ -12,7 +12,7 @@ class MemebershipsController < ApplicationController
     end
 
     def create 
-        @membership = Memebership.create(membership_params)
+        @membership = Memebership.create(memebership_params)
         render json: @membership
     end
 
@@ -24,7 +24,7 @@ class MemebershipsController < ApplicationController
 
     private
 
-    def membership_params
+    def memebership_params
         params.permit(:user_id, :organization_id)
     end
 

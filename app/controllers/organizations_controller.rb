@@ -7,13 +7,13 @@ class OrganizationsController < ApplicationController
 
     def show
         @organization = Organization.find(params[:id])
-        #@list = List.find(params[:id])
-        #@taskcard = Taskcard.find(params[:id])
+        
         render json: @organization
     end
 
     def create
-        @organization = Organization.find(organization_params)
+        @organization = Organization.create(name: organization_params[:name])
+        #Memebership.create(user_id: organization_params[:user_id], organization_id: @organization.id)
         render json: @organization
     end
 
@@ -21,6 +21,6 @@ class OrganizationsController < ApplicationController
     private
   
     def organization_params
-        params.permit(:name, :membership_code)
+        params.permit(:name, :membership_code, :user_id)
     end
 end

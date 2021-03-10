@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
     def create 
-        @list = List.find(list_params)
+        @list = List.create(list_params)
         render json: @list
     end
 
@@ -24,6 +24,6 @@ class ListsController < ApplicationController
     private
 
     def list_params
-        params.permit(:title)
+        params.require(:list).permit(:organization_id, :title)
     end
 end

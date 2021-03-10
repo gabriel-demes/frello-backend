@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   # post '/taskcards', to: 'taskcards#create'
   # post '/lists', to: 'lists#create'
 
-  get '/users/:id', to: 'users#show'
-  get '/organizations/:id', to: 'organizations#show'
+  # get '/users/:id', to: 'users#show'
+  # get '/organizations/:id', to: 'organizations#show'
 end
