@@ -24,6 +24,7 @@ class TaskcardsController < ApplicationController
     def update
         @taskcard = Taskcard.find(params[:id])
         @taskcard.update(taskcard_params)
+        #byebug
         render json: @taskcard
     end
 
@@ -33,6 +34,6 @@ class TaskcardsController < ApplicationController
     private 
 
     def taskcard_params
-        params.permit(:title,:deadline,:description)
+        params.permit(:title, :deadline, :description, :list_id)
     end
 end
