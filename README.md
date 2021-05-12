@@ -1,24 +1,36 @@
-# README
+## Frello
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Frello is a task-management application desgined to help orginizations better manage teams and projects. It is loosely based on the popular task-management application, Trello.
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
+- Rails 6
+- JavaScript
+- PostgresSQL
 
-* System dependencies
+## Setup
 
-* Configuration
+### Backend
 
-* Database creation
+Fork the backend Repo: https://github.com/gabriel-demes/frello-backend
 
-* Database initialization
+run:
 
-* How to run the test suite
+`bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+`rails db:create`
 
-* Deployment instructions
+`rails db:migrate`
 
-* ...
+`rails db:seed`
+
+`rails server`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Frontend
+
+Fork the frontend Repo: https://github.com/gabriel-demes/frello-frontend
+
+Run the Index.html file in your browser
